@@ -1,0 +1,32 @@
+[*] Create directory structure
+
+[*] Create npm project and install all dependencies
+    - Dependencies
+        - express
+        - ejs express-ejs-layouts
+    - Dev Dependencies
+        - nodemon
+
+[*] Create Express Server - Create server.js file
+
+[*] Git setup and first commit
+
+[*] Install Larvel mix
+    - setup js and scss
+
+[*] Install tailwind css
+
+[*] Creating Home page using HTML & CSS
+    - using tailwind css
+
+[*] Crate cart page
+    - order summary section
+    - empty card section
+
+[*] Create order controller and link it in server.js file
+
+[*] Create order view with table for customer and admin
+
+[*] Create orders single page with status
+
+[*] Create login page with route
