@@ -1,0 +1,40 @@
+body {
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #232323;
+  height: 4000px;
+}
+
+.cart-icon-bg {
+  background: #fe5f1e;
+}
+.cart-icon-bg:hover {
+  background: #b23301;
+  color: #fff;
+}
+
+.nav-link {
+  transition: all 0.3s ease-in-out;
+}
+.nav-link:hover {
+  color: #fe5f1e;
+}
+
+section.hero {
+  background: #f8f8f8;
+}
+
+.size {
+  background: #f8f8f8;
+}
+
+.add-to-cart {
+  border: 1px solid #fe5f1e;
+  color: #fe5f1e;
+  transition: all 0.3s ease-in-out;
+}
+.add-to-cart:hover {
+  background: #fe5f1e;
+  color: #fff;
+  border-color: #fff;
+}
