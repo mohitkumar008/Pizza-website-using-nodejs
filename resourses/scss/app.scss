@@ -4,39 +4,76 @@ body {
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
     color: $dark;
-    height: 4000px;
+    // height: 4000px;
 }
 
 .cart-icon-bg {
     background: $primary;
-    &:hover{
+
+    &:hover {
         background: $primary-hover;
         color: $pure;
     }
 }
 
-.nav-link{
+.nav-link {
     transition: $smooth;
-    &:hover{
+
+    &:hover {
         color: $primary;
     }
 }
 
-section.hero{
+section.hero {
     background: $secondary;
 }
 
-.size{
+.btn-primary {
+    background: $primary;
+    transition: $smooth;
+
+    &:hover {
+        background: $primary-hover;
+    }
+}
+
+.size {
     background: $secondary;
 }
 
-.add-to-cart{
+.add-to-cart {
     border: 1px solid $primary;
     color: $primary;
     transition: $smooth;
-    &:hover{
+
+    &:hover {
         background: $primary;
         color: $pure;
         border-color: $pure;
     }
+}
+
+section.cart {
+    background: $secondary;
+
+    .amount {
+        color: $primary;
+    }
+}
+
+.font-primary{
+    color: $primary;
+    &:hover{
+        color: $primary-hover;
+    }
+}
+
+section.login {
+    background: $secondary;
+    height: calc(100vh - 86px);
+}
+
+section.register {
+    background: $secondary;
+    height: calc(100vh - 86px);
 }

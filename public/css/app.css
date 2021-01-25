@@ -2,7 +2,6 @@ body {
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #232323;
-  height: 4000px;
 }
 
 .cart-icon-bg {
@@ -24,6 +23,14 @@ section.hero {
   background: #f8f8f8;
 }
 
+.btn-primary {
+  background: #fe5f1e;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background: #b23301;
+}
+
 .size {
   background: #f8f8f8;
 }
@@ -37,4 +44,28 @@ section.hero {
   background: #fe5f1e;
   color: #fff;
   border-color: #fff;
+}
+
+section.cart {
+  background: #f8f8f8;
+}
+section.cart .amount {
+  color: #fe5f1e;
+}
+
+.font-primary {
+  color: #fe5f1e;
+}
+.font-primary:hover {
+  color: #b23301;
+}
+
+section.login {
+  background: #f8f8f8;
+  height: calc(100vh - 86px);
+}
+
+section.register {
+  background: #f8f8f8;
+  height: calc(100vh - 86px);
 }
