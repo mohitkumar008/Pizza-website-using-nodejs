@@ -40,8 +40,7 @@ if(alertMsg) {
     }, 3000);
 }
 
-//Admin code
-initAdmin()
+
 
 
 //Change order status
@@ -54,7 +53,11 @@ let time = document.createElement('small')
 order = JSON.parse(order)
 
 function updateStatus(order) {
-    //
+    statuses.forEach((status) => {
+        status.classList.remove('step-completed')
+        status.classList.remove('current')
+    })
+
     let stepCompleted = true
     statuses.forEach((status) => {
         let dataProp = status.dataset.status
@@ -72,3 +75,32 @@ function updateStatus(order) {
     })
 }
 updateStatus(order)
+
+// Socket
+let socket = io()
+//Admin code
+initAdmin(socket)
+
+// Join
+if(order) {
+    socket.emit('join', `order_${order._id}`)
+}
+let adminAreaPath = window.location.pathname
+if(adminAreaPath.includes('admin')) {
+    initAdmin(socket)
+    socket.emit('join', 'adminRoom')
+}
+
+
+socket.on('orderUpdated', (data) => {
+    const updatedOrder = { ...order }
+    updatedOrder.updatedAt = moment().format()
+    updatedOrder.status = data.status
+    updateStatus(updatedOrder)
+    new Noty({
+        type: 'success',
+        timeout: 1000,
+        text: 'Order updated',
+        progressBar: false,
+    }).show();
+})
