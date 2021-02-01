@@ -78,8 +78,7 @@ updateStatus(order)
 
 // Socket
 let socket = io()
-//Admin code
-initAdmin(socket)
+
 
 // Join
 if(order) {

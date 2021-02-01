@@ -158,9 +158,10 @@ section.status {
 }
 
 //Line
-.status-box ul li{
+.status-box ul li {
     position: relative;
 }
+
 .status-box ul li::before {
     content: '';
     position: absolute;
@@ -173,7 +174,7 @@ section.status {
 }
 
 //last dot
-.status-box ul li:nth-child(5) span::after{
+.status-box ul li:nth-child(5) span::after {
     box-shadow: 0 20px 1px 20px $secondary;
 }
 
@@ -183,12 +184,14 @@ section.status {
 .status-box ul li.step-completed::before {
     background: $gray
 }
+
 //dot
 .status-box ul li.step-completed span::after {
     background: $gray
 }
+
 //font
-.status-box ul li.step-completed span{
+.status-box ul li.step-completed span {
     color: $gray;
 }
 
@@ -197,12 +200,35 @@ section.status {
 .status-box ul li.current span::after {
     background: $primary;
 }
+
 //font
-.status-box ul li.current span{
+.status-box ul li.current span {
     color: $primary;
 }
 
 .status-box ul li small {
     float: right;
     font-size: 14px;
+    font-weight: bold;
+}
+
+@media (max-width: 1060px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .status-box ul li span::before {
+        font-size: 25px;
+    }
+    .status-box ul li small {
+        font-size: 10px;
+    }
+}
+
+// Error Page
+.error_page{
+    background: $secondary;
+    height: calc(100vh - 86px);
 }
